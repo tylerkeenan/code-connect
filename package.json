@@ -1,0 +1,25 @@
+{
+  "name": "codeconnect",
+  "version": "1.0.0",
+  "description": "GitHub repository for the Code Connect challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerkeenan/code-connect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylerkeenan/code-connect/issues"
+  },
+  "homepage": "https://github.com/tylerkeenan/code-connect#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "router": "^1.3.8"
+  }
+}
