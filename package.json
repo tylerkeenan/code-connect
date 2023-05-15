@@ -1,0 +1,23 @@
+{
+  "name": "kanios-project",
+  "version": "1.0.0",
+  "description": "GitHub repository for the Code Connect challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylerkeenan/code-connect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylerkeenan/code-connect/issues"
+  },
+  "homepage": "https://github.com/tylerkeenan/code-connect#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
