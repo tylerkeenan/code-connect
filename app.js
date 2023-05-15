@@ -3,6 +3,9 @@ const app = express();
 
 app.use(express.static(__dirname + "/styles"));
 
+app.use(express.static(__dirname + "/media"));
+
+
 const index = require("./routes/index");
 
 // index route 
