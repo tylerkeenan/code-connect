@@ -4,6 +4,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/styles"));
 
 app.use(express.static(__dirname + "/media"));
@@ -13,8 +14,6 @@ const index = require("./routes/index");
 
 // index route 
 // app.use('/',index);
-
-
 
 //sets ejs as view engine
 app.set("view engine", "ejs");
@@ -57,11 +56,10 @@ let createlist = () => {
   ]
 };
 
-
 // Handle the form submission to add a new employee to the array
 app.post('/add-employee', (req, res) => {
   const newEmployee = {
-    name: req.body.name,
+    EmployeeName: req.body.EmployeeName,
     address: req.body.address,
     salary: req.body.salary,
     role: req.body.role,
@@ -72,11 +70,13 @@ app.post('/add-employee', (req, res) => {
   console.table(mylist)
 });
 
+
 app.get('/admin', (req ,res) =>{
 
   res.render('admin',{mylist : mylist})
 
 });
+
 
 createlist();
 
@@ -88,3 +88,4 @@ app.get('/', (req, res)=>{
   res.render('index', {mylist:mylist});
 
 });
+

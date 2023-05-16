@@ -28,3 +28,8 @@
     font-size: 36px;
     padding: 20px;
 }
+
+.button{
+    display: flex;
+    justify-content: end;
+}
