@@ -81,20 +81,22 @@
             </div>
             <!--employee card-->
              <div class="container">
-                 <a href="/admin"><button>admin</button></a>
-                 <div class="d-flex justify-content-center">
+                 <a href="/admin"><button class="btn btn-primary mt-3">admin</button></a>
+                 <div class="ustify-content-center">
+                    <% mylist.forEach((list)=>{ %>
                      <div class="card mb-3 shadow mt-5" style="max-width: 540px;">
                          <div class="row no-gutters">
                              <div class="col-md-4">
                                  <i class="bi bi-person-badge card-img text-muted"></i>
                              </div>
+                             
                              <div class="col-md-8">
-                                 <div class="card-body">
-                                     <h5 class="card-title">Employee Name</h5>
-                                     <p class="card-text">Role:</p>
-                                     <p class="card-text">Phone number:</p>
-                                     <p class="card-text">Salary:</p>
-                                     <p class="card-text">Address:</p>
+                                 <div class="card-body cardtext">
+                                     <p class="card-title"><%= list.EmployeeName %></p>
+                                     <p class="card-text"><%= list.role %></p>
+                                     <p class="card-text"> <%= list.employeeNumber%></p>
+                                     
+                                     
                                  </div>
                              </div>
                              <div class="col-md-11">
@@ -104,6 +106,7 @@
                              </div>
                          </div>
                      </div>
+                     <% })  %>
                  </div>
              </div>
         </div>
