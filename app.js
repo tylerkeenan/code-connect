@@ -1,5 +1,8 @@
 const express= require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/styles"));
 
@@ -51,6 +54,21 @@ let createlist = () => {
 },        
   ]
 };
+
+
+// Handle the form submission to add a new employee to the array
+app.post('/add-employee', (req, res) => {
+  const newEmployee = {
+    name: req.body.name,
+    address: req.body.address,
+    salary: req.body.salary,
+    role: req.body.role,
+    employeeNumber: req.body.employeeNumber // Generate a unique employee number
+  };
+  mylist.push(newEmployee);
+  res.render('admin', { mylist });
+  console.table(mylist)
+});
 
 app.get('/admin', (req ,res) =>{
 

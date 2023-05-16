@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <!--card for each employee-->
     <div class="container">
         <% mylist.forEach((list)=>{ %>
         <div class="row justify-content-center">
@@ -58,6 +59,42 @@
         </div>
         <% }) %>
     </div>
+
+    <!-- form to add new employee -->
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card shadow mt-5">
+              <div class="card-header">Add New Employee</div>
+              <div class="card-body">
+                <form method="POST" action="/add-employee">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name">
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address">
+                  </div>
+                  <div class="form-group">
+                    <label for="salary">Salary</label>
+                    <input type="text" class="form-control" id="salary" name="salary">
+                  </div>
+                  <div class="form-group">
+                    <label for="role">Role</label>
+                    <input type="text" class="form-control" id="role" name="role">
+                  </div>
+                  <div class="form-group">
+                    <label for="employeeNumber">Employee Number</label>
+                    <input type="text" class="form-control" id="employeeNumber" name="employeeNumber">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </body>
 
