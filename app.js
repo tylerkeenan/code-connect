@@ -16,9 +16,10 @@ app.listen(3000, () => {
   console.log("Server is running at port 3000");
 });
 
+
 let mylist =[];
 
-let createlist = function(){
+let createlist = () => {
 
     mylist = [
        {EmployeeName: "Joy ",
@@ -47,4 +48,15 @@ let createlist = function(){
 },        
   ]
 };
+
+app.get('/admin', (req ,res) =>{
+
+  res.render('admin',{mylist : mylist})
+
+});
+
+createlist();
+
+console.table(mylist);
+
 

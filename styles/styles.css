@@ -1,1 +1,26 @@
-   
+
+.card-img{
+    font-size: 200px;
+    width: 100%;
+    height: 100%;
+}
+
+.bi-trash3-fill{
+    font-size: 30px;
+    color: red;
+}
+
+
+
+.card{
+    width: 900px;
+}
+
+.cardtext{
+    font-size: 36px;
+    padding: 20px;
+}
+
+.imagegrid{
+    
+}

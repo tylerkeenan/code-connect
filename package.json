@@ -1,8 +1,7 @@
 {
 
+
   "name": "codeconnect",
-
-
   "version": "1.0.0",
   "description": "GitHub repository for the Code Connect challenge",
   "main": "index.js",
