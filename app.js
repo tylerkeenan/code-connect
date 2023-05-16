@@ -9,7 +9,9 @@ app.use(express.static(__dirname + "/media"));
 const index = require("./routes/index");
 
 // index route 
-app.use('/',index);
+// app.use('/',index);
+
+
 
 //sets ejs as view engine
 app.set("view engine", "ejs");
@@ -63,3 +65,8 @@ createlist();
 console.table(mylist);
 
 
+app.get('/', (req, res)=>{
+
+  res.render('index', {mylist:mylist});
+
+});
